@@ -4,17 +4,22 @@ type of python applications.
 
 ####How to use the packages
 
-import os 
-import magic 
 
-imagecheck = ImageValidator("./hello.txt",2014)
-check_for_image_mime = imagecheck.check_file_size("./hello.txt",2014)
-check_for_image_size = imagecheck.check_file_mime_type("./hello.txt")
+from image_file_validator.image_file_validator import check_file_type
+
+check_for_image_size = check_file_type("./hello.png")
+
+#FOR USAGE 
+if check_for_image_size == True:
+   print("valid image file")
+else:
+    print("invalid image file)
+
 
 
 # PIP PACKAGE DEPENDECIES
 
-pip install python-magic (pick your desired os)
+pip install filetype (pick your desired os)
 
 
 ### KINDLY MAKE PR for UPGRADE....
